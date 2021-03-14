@@ -1,0 +1,30 @@
+@mixin notebook {
+    @media (maxn-width: 1352px) {
+      @content;
+    }
+  }
+
+  @mixin noMobile {
+    @media (min-width: 792px) {
+      @content;
+
+      .header__nav {
+        li {
+            list-style-image: none;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: $color-grey;
+            padding: 0 20px;
+            font-weight: 700;
+            font-size: 0.6875rem;
+            letter-spacing: 0.1875rem;
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+      }
+    }
+  }
